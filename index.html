@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>User Directory | Practical Task 3B</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <main class="page">
+    <header class="hero">
+      <p class="eyebrow">NUST MISIS · CLIENT-SIDE SCRIPTS · MODULE 3</p>
+      <h1>User Directory</h1>
+      <p class="subtitle">Load users from a REST API, find a person, and read their latest posts.</p>
+    </header>
+
+    <section class="panel" aria-labelledby="users-heading">
+      <div class="section-heading">
+        <div>
+          <h2 id="users-heading">Users</h2>
+          <p class="hint">Data source: JSONPlaceholder</p>
+        </div>
+        <button type="button" id="loadUsersBtn" class="primary">Load users</button>
+      </div>
+      <label for="searchInput">Search by name</label>
+      <input id="searchInput" type="search" placeholder="e.g., Leanne" disabled />
+      <p id="status" class="status" role="status" aria-live="polite">Click “Load users” to begin.</p>
+      <div id="usersList" class="users-grid" aria-label="User directory"></div>
+    </section>
+
+    <section class="panel posts-panel" aria-labelledby="posts-heading">
+      <div class="section-heading">
+        <div>
+          <h2 id="posts-heading">User posts</h2>
+          <p class="hint" id="postsHint">Choose a user to see their first three posts.</p>
+        </div>
+      </div>
+      <p id="postsStatus" class="status" role="status" aria-live="polite">No user selected.</p>
+      <div id="postsList" class="posts-list"></div>
+    </section>
+
+    <footer>Practical Task 3B · HTML + CSS + Vanilla JavaScript</footer>
+  </main>
+</body>
+</html>
